@@ -1,6 +1,7 @@
 ### Get the mongo image from docker hub ###
 docker pull mongo 
 
+### Then press crl+p+q let mongo run in the back end
 ### Create the node and car-app images ###
 docker build -t car-app ./
 
