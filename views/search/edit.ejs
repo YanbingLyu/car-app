@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body>
+		<div class="w3-bar w3-black">
+			<a href="/" class="w3-bar-item w3-button w3-black w3-hover-red" >Home</a> 
+			<span class="w3-right">
+			<a href="/search/query" class="w3-bar-item w3-button w3-light-black">Search you like</a> 
+			<a href="/search/add" class="w3-bar-item w3-button w3-light-black">Add A New Car</a>  
+			<a href="/search" class="w3-bar-item w3-button w3-light-black">Edit and update</a>
+			</span>
+		</div>
+        <div class="w3-container w3-padding-16 w3-margin">		
+		    <h1 class="w3-middle"><%= title %></h1>
+		</div>	
+
+		<div class="w3-container w3-padding-16 w3-margin">
+			<form action="/search/edit/<%= id %>" method="post" name="forml">
+			<table width="25%" border="0">
+				<tr> 
+					<td>make: </td>
+					<td><input type="text" class="w3-input-middle w3-border" name="make" id="name" value="<%= make %>" /></td>
+				</tr>
+				<tr> 
+					<td>type: </td>
+					<td><input type="text" class="w3-input-middle w3-border" name="type" value="<%= type %>" /></td>
+				</tr>
+				<tr> 
+					<td>colour: </td>
+					<td><input type="text" class="w3-input-middle w3-border" name="colour" value="<%= colour %>" /></td>
+				</tr>
+				<tr> 
+					<td></td>
+					<td><input type="submit" name="Submit" value="Edit" class="w3-button w3-black"/></td>
+				</tr>
+			</table>
+			<input type="hidden" name="_method" value="PUT" />
+		</form>
+		</div>
+
+	</body>
+</html>	
+
